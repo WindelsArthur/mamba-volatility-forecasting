@@ -1,0 +1,16 @@
+# Environments
+__pycache__/
+*.pyc
+.env
+venv/
+env/
+
+# Data and Checkpoints
+data/*.csv
+data/*.log
+checkpoints/
+analysis_run/
+*.pt
+
+# OS generated files
+.DS_Store
