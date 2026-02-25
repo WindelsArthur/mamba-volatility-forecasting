@@ -18,7 +18,7 @@ This project was developed for the Deep Learning course at ETH Zurich.
 Clone the repository and install the required dependencies. The requirements are strictly pinned to ensure reproducibility.
 
 ```bash
-git clone [https://github.com/YOUR_USERNAME/mamba-finance.git](https://github.com/YOUR_USERNAME/mamba-finance.git)
+git clone [https://github.com/WindelsArthur/mamba-volatility-forecasting.git](https://github.com/WindelsArthur/mamba-volatility-forecasting.git)
 cd mamba-finance
 pip install -r requirements.txt
 ```
