@@ -55,7 +55,7 @@ python scripts/train.py \
 
 Fits the HAR baseline on the training split and evaluates Mamba, HAR, EWMA, and Last-Value heuristics on the out-of-sample test split.
 
-```Bash
+```bash
 python scripts/compute_metrics.py \
   --runs_root "checkpoints" \
   --batch_size 2048
@@ -65,16 +65,16 @@ python scripts/compute_metrics.py \
 
 Extracts the internal SSM hidden trajectories under teacher-forcing to reproduce the representation analyses discussed in the paper (impulse responses, linear probing, and initialization context).
 
-```Bash
+```bash
 python scripts/analyze_states.py \
   --csv "data/dataset_3feat_alltickers.csv" \
   --ckpt "checkpoints/YOUR_RUN_NAME/model_best.pt" \
   --outdir "analysis_run" \
   --do_probe \
   --do_initctx \
-  --yscale_log
+  --yscale_log```
 Generated plots and tables will be saved in analysis_run/plots/ and analysis_run/tables/.
-```
+
 
 ## Authors
 * Arthur Windels
