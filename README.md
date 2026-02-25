@@ -77,5 +77,5 @@ Generated plots and tables will be saved in analysis_run/plots/ and analysis_run
 ```
 
 ## Authors
-Arthur Windels
-Sacha Liechti
+* Arthur Windels
+* Sacha Liechti
