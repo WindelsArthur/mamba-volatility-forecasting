@@ -19,7 +19,7 @@ Clone the repository and install the required dependencies. The requirements are
 
 ```bash
 git clone [https://github.com/WindelsArthur/mamba-volatility-forecasting.git](https://github.com/WindelsArthur/mamba-volatility-forecasting.git)
-cd mamba-finance
+cd mamba-volatility-forecasting
 pip install -r requirements.txt
 ```
 
