@@ -72,7 +72,8 @@ python scripts/analyze_states.py \
   --outdir "analysis_run" \
   --do_probe \
   --do_initctx \
-  --yscale_log```
+  --yscale_log
+```
 Generated plots and tables will be saved in analysis_run/plots/ and analysis_run/tables/.
 
 
