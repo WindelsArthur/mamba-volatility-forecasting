@@ -31,7 +31,7 @@ The research pipeline is divided into four sequential scripts located in the scr
 Downloads S&P 500 daily OHLCV data, engineers log-features, and aligns them to a canonical trading calendar.
 
 ```bash
-python scripts/01_make_dataset.py \
+python scripts/make_dataset.py \
   --repo_id "guloyy/sp500_csv" \
   --out_path "data/dataset_3feat_alltickers.csv" \
   --ref_ticker "AAPL"
@@ -42,7 +42,7 @@ python scripts/01_make_dataset.py \
 Trains the MambaTS model using a causal, many-to-many teacher-forced regime.
 
 ```bash
-python scripts/02_train.py \
+python scripts/train.py \
   --dataset_csv "data/dataset_3feat_alltickers.csv" \
   --out_dir "checkpoints" \
   --seq_len 64 \
@@ -56,7 +56,7 @@ python scripts/02_train.py \
 Fits the HAR baseline on the training split and evaluates Mamba, HAR, EWMA, and Last-Value heuristics on the out-of-sample test split.
 
 ```Bash
-python scripts/03_compute_metrics.py \
+python scripts/compute_metrics.py \
   --runs_root "checkpoints" \
   --batch_size 2048
 ```
@@ -66,7 +66,7 @@ python scripts/03_compute_metrics.py \
 Extracts the internal SSM hidden trajectories under teacher-forcing to reproduce the representation analyses discussed in the paper (impulse responses, linear probing, and initialization context).
 
 ```Bash
-python scripts/04_analyze_states.py \
+python scripts/analyze_states.py \
   --csv "data/dataset_3feat_alltickers.csv" \
   --ckpt "checkpoints/YOUR_RUN_NAME/model_best.pt" \
   --outdir "analysis_run" \
